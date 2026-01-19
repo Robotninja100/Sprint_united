@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <section className="hero" style={{
       position: 'relative',
-      height: '95vh',
-      minHeight: '400px',
+      height: '100vh',
+      minHeight: '500px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -20,7 +20,7 @@ const Hero = () => {
         height: '100%',
         backgroundImage: `url(${huibRunning})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center 15%',
+        backgroundPosition: 'center 5%',
         filter: 'brightness(0.4)'
       }}></div>
 
