@@ -153,3 +153,81 @@ img {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+/* Base Responsive styles */
+.hero-title {
+  font-size: 5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+.mobile-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  :root {
+    --spacing-xl: 4rem;
+    --spacing-lg: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    /* Simplificatie voor nu */
+  }
+
+  /* Stack grids on mobile */
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .order-mobile-last {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-bg {
+    background-position: center 10% !important;
+    /* Nog iets meer naar boven op kleine schermen */
+  }
+}

@@ -9,7 +9,7 @@ const Home = () => {
             <Hero />
 
             <section id="over-ons" style={{ padding: 'var(--spacing-xl) 0', background: 'var(--color-bg-dark)' }}>
-                <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                <div className="container grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                     <div>
                         <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0' }}>Over Sprint United</h2>
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
@@ -36,11 +36,12 @@ const Home = () => {
                             bottom: '-20px',
                             right: '-20px',
                             background: 'var(--gradient-primary)',
-                            padding: '1.5rem',
+                            padding: '1rem',
                             borderRadius: 'var(--radius-md)',
                             color: 'white',
                             fontWeight: 'bold',
-                            boxShadow: 'var(--shadow-glow-blue)'
+                            boxShadow: 'var(--shadow-glow-blue)',
+                            zIndex: 2
                         }}>
                             12 Atleten
                         </div>
@@ -55,7 +56,7 @@ const Home = () => {
                         maxWidth: '800px',
                         margin: '0 auto',
                         background: 'var(--color-bg-card)',
-                        padding: '3rem',
+                        padding: '2rem',
                         borderRadius: 'var(--radius-lg)',
                         border: '1px solid rgba(255,255,255,0.1)'
                     }}>
@@ -64,7 +65,7 @@ const Home = () => {
                             <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>Elke week trainen we samen aan onze conditie en techniek.</p>
                         </div>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', textAlign: 'left' }}>
+                        <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', textAlign: 'left' }}>
                             <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-md)' }}>
                                 <h4 style={{ color: 'white', marginBottom: '0.5rem' }}>Nu (Winterlocatie)</h4>
                                 <p style={{ color: 'var(--color-text-muted)' }}>Parkeerplaats van SDC Putten</p>

@@ -5,7 +5,8 @@ const Hero = () => {
   return (
     <section className="hero" style={{
       position: 'relative',
-      height: '90vh',
+      height: '75vh',
+      minHeight: '400px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -19,13 +20,12 @@ const Hero = () => {
         height: '100%',
         backgroundImage: `url(${huibRunning})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center 15%',
         filter: 'brightness(0.4)'
       }}></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-        <h1 style={{
-          fontSize: '5rem',
+        <h1 className="hero-title" style={{
           background: 'var(--gradient-primary)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
@@ -36,9 +36,7 @@ const Hero = () => {
         }}>
           Sprint United
         </h1>
-        <p style={{
-          fontSize: '1.5rem',
-          maxWidth: '800px',
+        <p className="hero-subtitle" style={{
           margin: '0 auto 2rem',
           color: 'var(--color-text-light)'
         }}>
@@ -46,7 +44,7 @@ const Hero = () => {
           Plezier, beweging en vriendschap.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          <a href="#signup" className="btn btn-primary animate-float">Meld je aan voor een proeftraining</a>
+          <a href="#signup" className="btn btn-primary animate-float">Proeftraining aanvragen</a>
         </div>
       </div>
     </section>
