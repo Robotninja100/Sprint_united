@@ -242,3 +242,29 @@ img {
     height: 35px !important;
   }
 }
+
+.success-card {
+  padding: 4rem;
+}
+
+.success-title {
+  font-size: 2.5rem;
+}
+
+.success-text {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .success-card {
+    padding: 2rem;
+  }
+
+  .success-title {
+    font-size: 1.8rem;
+  }
+
+  .success-text {
+    font-size: 1rem;
+  }
+}

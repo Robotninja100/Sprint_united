@@ -12,9 +12,8 @@ const SuccessPage = () => {
             textAlign: 'center',
             padding: '2rem'
         }}>
-            <div style={{
+            <div className="success-card" style={{
                 maxWidth: '600px',
-                padding: '4rem',
                 background: 'var(--color-bg-card)',
                 borderRadius: 'var(--radius-lg)',
                 boxShadow: 'var(--shadow-glow-blue)',
@@ -22,21 +21,20 @@ const SuccessPage = () => {
             }}>
                 <div style={{
                     fontSize: '5rem',
-                    marginBottom: '2rem'
+                    marginBottom: '1rem'
                 }}>
                     ✅
                 </div>
-                <h1 style={{
-                    fontSize: '2.5rem',
+                <h1 className="success-title" style={{
                     background: 'var(--gradient-primary)',
                     WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     marginBottom: '1rem'
                 }}>
                     Aanvraag Verzonden!
                 </h1>
-                <p style={{
-                    fontSize: '1.2rem',
+                <p className="success-text" style={{
                     color: 'var(--color-text-muted)',
                     marginBottom: '2.5rem'
                 }}>
