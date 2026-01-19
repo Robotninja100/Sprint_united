@@ -206,8 +206,11 @@ img {
   }
 
   .nav-links {
-    display: none;
-    /* Simplificatie voor nu */
+    gap: 1rem !important;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
   }
 
   /* Stack grids on mobile */
@@ -229,5 +232,13 @@ img {
   .hero-bg {
     background-position: center 10% !important;
     /* Nog iets meer naar boven op kleine schermen */
+  }
+
+  nav span {
+    font-size: 1.1rem !important;
+  }
+
+  nav img {
+    height: 35px !important;
   }
 }

@@ -38,7 +38,7 @@ function App() {
               SPRINT UNITED
             </span>
           </Link>
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <div className="nav-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <a href="#over-ons" className="nav-link">Over Ons</a>
             <a href="#training-info" className="nav-link">Training</a>
             <Link to="/#signup" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>Proeftraining</Link>

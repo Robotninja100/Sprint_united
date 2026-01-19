@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero" style={{
       position: 'relative',
-      height: '85vh',
+      height: '95vh',
       minHeight: '400px',
       display: 'flex',
       alignItems: 'center',
