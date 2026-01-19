@@ -1,16 +1,46 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const SignupForm = () => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        age: '',
-        level: 'beginner'
+        comments: ''
     });
 
-    const handleSubmit = (e) => {
+    // VERVANG DIT DOOR HET EMAILADRES WAAR DE BERICHTEN HEEN MOETEN:
+    const TARGET_EMAIL = "huibjansen@gmail.com"; // Bijv. info@sprintunited.nl
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert('Bedankt voor je aanmelding! We nemen snel contact op.');
+
+        try {
+            const response = await fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    Naam: formData.name,
+                    Email: formData.email,
+                    Opmerkingen: formData.comments,
+                    _subject: `Proeftraining aanvraag: ${formData.name}`
+                })
+            });
+
+            if (response.ok) {
+                setFormData({ name: '', email: '', comments: '' });
+                navigate('/success');
+            } else {
+                throw new Error('FormSubmit error');
+            }
+        } catch (error) {
+            alert('Er ging iets mis bij het versturen. Controleer het emailadres of probeer het later nog eens.');
+        }
     };
 
     const handleChange = (e) => {
@@ -25,7 +55,8 @@ const SignupForm = () => {
         borderRadius: 'var(--radius-sm)',
         color: 'white',
         marginBottom: '1rem',
-        fontSize: '1rem'
+        fontSize: '1rem',
+        fontFamily: 'inherit'
     };
 
     return (
@@ -39,7 +70,7 @@ const SignupForm = () => {
                     borderRadius: 'var(--radius-lg)',
                     boxShadow: 'var(--shadow-glow-blue)'
                 }}>
-                    <h2 className="section-title" style={{ marginBottom: '2rem' }}>Word Lid!</h2>
+                    <h2 className="section-title" style={{ marginBottom: '2rem' }}>Aanmelden Proeftraining</h2>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label style={{ display: 'block', marginBottom: '0.5rem' }}>Naam</label>
@@ -50,10 +81,11 @@ const SignupForm = () => {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
+                                placeholder="Jouw naam"
                             />
                         </div>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem' }}>Email</label>
+                            <label style={{ display: 'block', marginBottom: '0.5rem' }}>Emailadres</label>
                             <input
                                 type="email"
                                 name="email"
@@ -61,36 +93,21 @@ const SignupForm = () => {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
+                                placeholder="je@email.com"
                             />
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                            <div>
-                                <label style={{ display: 'block', marginBottom: '0.5rem' }}>Leeftijd</label>
-                                <input
-                                    type="number"
-                                    name="age"
-                                    style={inputStyle}
-                                    required
-                                    value={formData.age}
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div>
-                                <label style={{ display: 'block', marginBottom: '0.5rem' }}>Niveau</label>
-                                <select
-                                    name="level"
-                                    style={inputStyle}
-                                    value={formData.level}
-                                    onChange={handleChange}
-                                >
-                                    <option value="beginner">Beginner</option>
-                                    <option value="gevorderd">Gevorderd</option>
-                                    <option value="expert">Expert</option>
-                                </select>
-                            </div>
+                        <div>
+                            <label style={{ display: 'block', marginBottom: '0.5rem' }}>Eventuele opmerkingen</label>
+                            <textarea
+                                name="comments"
+                                style={{ ...inputStyle, height: '120px', resize: 'vertical' }}
+                                value={formData.comments}
+                                onChange={handleChange}
+                                placeholder="Heb je vragen of opmerkingen?"
+                            />
                         </div>
                         <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }}>
-                            Aanmelden
+                            Verstuur Aanvraag
                         </button>
                     </form>
                 </div>

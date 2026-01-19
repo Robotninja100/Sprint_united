@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import TrainingPage from './pages/TrainingPage';
 import InfoPage from './pages/InfoPage';
+import SuccessPage from './pages/SuccessPage';
 import logo from './assets/logo.jpg';
 
 function App() {
@@ -37,10 +38,10 @@ function App() {
               SPRINT UNITED
             </span>
           </Link>
-          <div style={{ display: 'flex', gap: '2rem' }}>
-            <Link to="/info" className="nav-link">Info</Link>
-            <Link to="/training" className="nav-link">Training</Link>
-            <Link to="/#signup" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>Lid Worden</Link>
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            <a href="#over-ons" className="nav-link">Over Ons</a>
+            <a href="#training-info" className="nav-link">Training</a>
+            <Link to="/#signup" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>Proeftraining</Link>
           </div>
         </nav>
 
@@ -48,6 +49,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/training" element={<TrainingPage />} />
           <Route path="/info" element={<InfoPage />} />
+          <Route path="/success" element={<SuccessPage />} />
         </Routes>
 
         <footer style={{
@@ -57,7 +59,7 @@ function App() {
           color: 'var(--color-text-muted)',
           marginTop: 'auto'
         }}>
-          <p>&copy; 2025 Sprint United. Alle rechten voorbehouden.</p>
+          <p>&copy; 2026 Sprint United. Alle rechten voorbehouden.</p>
         </footer>
       </div>
     </Router>
