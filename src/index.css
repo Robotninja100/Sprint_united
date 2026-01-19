@@ -135,6 +135,19 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
 /* Animations */
 @keyframes float {
   0% {
@@ -198,7 +211,8 @@ img {
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .container {
@@ -206,21 +220,26 @@ img {
   }
 
   .nav-links {
-    gap: 1rem !important;
+    gap: 0.8rem !important;
   }
 
   .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-logo-text {
+    font-size: 1.1rem !important;
   }
 
   /* Stack grids on mobile */
-  .grid-2 {
+  .grid-2,
+  .grid-3 {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
-  .order-mobile-last {
-    order: 2;
+  .section-padding {
+    padding: var(--spacing-lg) 0 !important;
   }
 }
 
@@ -230,21 +249,20 @@ img {
   }
 
   .hero-bg {
-    background-position: center 10% !important;
-    /* Nog iets meer naar boven op kleine schermen */
+    background-position: center 2% !important;
+    /* Nog hoger voor mobiel om hoofd te zien */
   }
 
-  nav span {
-    font-size: 1.1rem !important;
-  }
-
-  nav img {
-    height: 35px !important;
+  .nav-logo-text {
+    display: none;
+    /* Verberg tekst op hele kleine schermen, logo is genoeg */
   }
 }
 
 .success-card {
   padding: 4rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .success-title {

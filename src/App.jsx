@@ -28,7 +28,7 @@ function App() {
         }}>
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <img src={logo} alt="Sprint United Logo" style={{ height: '50px', borderRadius: '50%' }} />
-            <span style={{
+            <span className="nav-logo-text" style={{
               fontSize: '1.5rem',
               fontWeight: 'bold',
               background: 'var(--gradient-primary)',

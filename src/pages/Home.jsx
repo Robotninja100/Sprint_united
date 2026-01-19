@@ -8,8 +8,8 @@ const Home = () => {
         <>
             <Hero />
 
-            <section id="over-ons" style={{ padding: 'var(--spacing-xl) 0', background: 'var(--color-bg-dark)' }}>
-                <div className="container grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+            <section id="over-ons" className="section-padding" style={{ padding: 'var(--spacing-xl) 0', background: 'var(--color-bg-dark)' }}>
+                <div className="container grid-2">
                     <div>
                         <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0' }}>Over Sprint United</h2>
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section id="training-info" style={{ padding: 'var(--spacing-xl) 0', background: 'rgba(255,255,255,0.02)' }}>
+            <section id="training-info" className="section-padding" style={{ padding: 'var(--spacing-xl) 0', background: 'rgba(255,255,255,0.02)' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h2 className="section-title">Wanneer & Waar</h2>
                     <div style={{
@@ -65,7 +65,7 @@ const Home = () => {
                             <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>Elke week trainen we samen aan onze conditie en techniek.</p>
                         </div>
 
-                        <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', textAlign: 'left' }}>
+                        <div className="grid-2" style={{ textAlign: 'left' }}>
                             <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-md)' }}>
                                 <h4 style={{ color: 'white', marginBottom: '0.5rem' }}>Nu (Winterlocatie)</h4>
                                 <p style={{ color: 'var(--color-text-muted)' }}>Parkeerplaats van SDC Putten</p>
