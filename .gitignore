@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Source photo folders (originals already copied to src/assets/)
+united/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

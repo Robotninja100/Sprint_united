@@ -1,6 +1,8 @@
 import React from 'react';
+import { Users, Clock, MapPin, Sparkles } from 'lucide-react';
 import Hero from '../components/Hero';
 import SignupForm from '../components/SignupForm';
+import Gallery from '../components/Gallery';
 import groupImg from '../assets/sprint_united_group.jpg';
 
 const Home = () => {
@@ -11,7 +13,10 @@ const Home = () => {
             <section id="over-ons" className="section-padding" style={{ padding: 'var(--spacing-xl) 0', background: 'var(--color-bg-dark)' }}>
                 <div className="container grid-2">
                     <div>
-                        <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0' }}>Over Sprint United</h2>
+                        <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                            <Users size={36} strokeWidth={2} style={{ color: 'var(--color-primary-orange)', flexShrink: 0 }} />
+                            Over Sprint United
+                        </h2>
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
                             Sprint United is een hardloopclub voor kinderen van 6 - 12 jaar.
                             De club is opgericht door <strong>Huib Jansen</strong> in augustus 2025 en is inmiddels
@@ -51,7 +56,10 @@ const Home = () => {
 
             <section id="training-info" className="section-padding" style={{ padding: 'var(--spacing-xl) 0', background: 'rgba(255,255,255,0.02)' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
-                    <h2 className="section-title">Wanneer & Waar</h2>
+                    <h2 className="section-title" style={{ display: 'inline-flex', alignItems: 'center', gap: '1rem', justifyContent: 'center' }}>
+                        <Clock size={36} strokeWidth={2} style={{ color: 'var(--color-accent-cyan)', flexShrink: 0 }} />
+                        Wanneer & Waar
+                    </h2>
                     <div style={{
                         maxWidth: '800px',
                         margin: '0 auto',
@@ -67,17 +75,25 @@ const Home = () => {
 
                         <div className="grid-2" style={{ textAlign: 'left' }}>
                             <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-md)' }}>
-                                <h4 style={{ color: 'white', marginBottom: '0.5rem' }}>Nu (Winterlocatie)</h4>
+                                <h4 style={{ color: 'white', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    <MapPin size={20} style={{ color: 'var(--color-text-muted)' }} />
+                                    Nu (Winterlocatie)
+                                </h4>
                                 <p style={{ color: 'var(--color-text-muted)' }}>Parkeerplaats van SDC Putten</p>
                             </div>
                             <div style={{ padding: '1.5rem', background: 'rgba(255,215,0,0.1)', borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,215,0,0.2)' }}>
-                                <h4 style={{ color: 'var(--color-primary-gold)', marginBottom: '0.5rem' }}>Vanaf Maart 2026</h4>
+                                <h4 style={{ color: 'var(--color-primary-gold)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    <Sparkles size={20} style={{ color: 'var(--color-primary-gold)' }} />
+                                    Vanaf Maart 2026
+                                </h4>
                                 <p style={{ color: 'var(--color-text-muted)' }}>Grasveld aan de Driestweg in Krachtighuizen</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <Gallery />
 
             <SignupForm />
         </>

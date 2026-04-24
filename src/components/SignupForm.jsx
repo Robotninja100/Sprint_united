@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Mail, User, MessageSquare, Send } from 'lucide-react';
 
 
 const SignupForm = () => {
@@ -70,10 +71,16 @@ const SignupForm = () => {
                     borderRadius: 'var(--radius-lg)',
                     boxShadow: 'var(--shadow-glow-blue)'
                 }}>
-                    <h2 className="section-title" style={{ marginBottom: '2rem' }}>Aanmelden Proeftraining</h2>
+                    <h2 className="section-title" style={{ marginBottom: '2rem', display: 'inline-flex', alignItems: 'center', gap: '1rem', justifyContent: 'center', width: '100%' }}>
+                        <Send size={36} strokeWidth={2} style={{ color: 'var(--color-primary-orange)', flexShrink: 0 }} />
+                        Aanmelden Proeftraining
+                    </h2>
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem' }}>Naam</label>
+                            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                                <User size={18} style={{ color: 'var(--color-primary-gold)' }} />
+                                Naam
+                            </label>
                             <input
                                 type="text"
                                 name="name"
@@ -85,7 +92,10 @@ const SignupForm = () => {
                             />
                         </div>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem' }}>Emailadres</label>
+                            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                                <Mail size={18} style={{ color: 'var(--color-primary-gold)' }} />
+                                Emailadres
+                            </label>
                             <input
                                 type="email"
                                 name="email"
@@ -97,7 +107,10 @@ const SignupForm = () => {
                             />
                         </div>
                         <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem' }}>Eventuele opmerkingen</label>
+                            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                                <MessageSquare size={18} style={{ color: 'var(--color-primary-gold)' }} />
+                                Eventuele opmerkingen
+                            </label>
                             <textarea
                                 name="comments"
                                 style={{ ...inputStyle, height: '120px', resize: 'vertical' }}
@@ -106,7 +119,8 @@ const SignupForm = () => {
                                 placeholder="Heb je vragen of opmerkingen?"
                             />
                         </div>
-                        <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }}>
+                        <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                            <Send size={18} />
                             Verstuur Aanvraag
                         </button>
                     </form>

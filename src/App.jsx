@@ -41,6 +41,7 @@ function App() {
           <div className="nav-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <a href="#over-ons" className="nav-link">Over Ons</a>
             <a href="#training-info" className="nav-link">Training</a>
+            <a href="#galerij" className="nav-link">Galerij</a>
             <Link to="/#signup" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>Proeftraining</Link>
           </div>
         </nav>
