@@ -9,14 +9,13 @@
   <!--
     SPA GitHub Pages redirect (rafgraph/spa-github-pages).
     Wanneer een gebruiker of crawler direct naar een deep URL gaat
-    (bv. /Sprint_united/foo), serveert GitHub Pages deze 404.
-    Dit script herschrijft de URL naar /Sprint_united/?/foo zodat
-    index.html de pad-restore kan uitvoeren en React Router
-    de juiste route kan tonen.
+    (bv. /foo), serveert GitHub Pages deze 404. Dit script herschrijft
+    de URL naar /?/foo zodat index.html de pad-restore kan uitvoeren
+    en React Router de juiste route kan tonen.
   -->
   <script>
     (function(l) {
-      var pathSegmentsToKeep = 1; // /Sprint_united/
+      var pathSegmentsToKeep = 0; // custom domain — geen project-subpad
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +

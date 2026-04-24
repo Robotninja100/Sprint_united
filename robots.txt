@@ -1,11 +1,10 @@
 # robots.txt — Sprint United
-# https://juliandunsbergen.github.io/Sprint_united/
+# https://sprintunitedputten.nl/
 
 User-agent: *
 Allow: /
 
 # Block the thank-you page from search results (geen SEO-waarde)
-Disallow: /Sprint_united/success
 Disallow: /success
 
 # Explicitly allow common crawlers
@@ -50,4 +49,4 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://juliandunsbergen.github.io/Sprint_united/sitemap.xml
+Sitemap: https://sprintunitedputten.nl/sitemap.xml
