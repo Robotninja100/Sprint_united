@@ -59,6 +59,18 @@
   <link rel="preconnect" href="https://formsubmit.co" crossorigin />
   <link rel="dns-prefetch" href="https://formsubmit.co" />
 
+  <!-- SPA GitHub Pages recovery: decode the redirect from 404.html -->
+  <script>
+    (function(l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function(s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+      }
+    }(window.location));
+  </script>
+
   <!-- JSON-LD: SportsClub (structured data for Google rich results) -->
   <script type="application/ld+json">
   {
@@ -82,10 +94,6 @@
       "jobTitle": "Trainer"
     },
     "sport": "Hardlopen",
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Jeugdatletiek Putten"
-    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Putten",
@@ -141,7 +149,7 @@
   }
   </script>
 
-  <!-- JSON-LD: WebSite with SearchAction -->
+  <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -156,66 +164,62 @@
     }
   }
   </script>
-
-  <!-- JSON-LD: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://juliandunsbergen.github.io/Sprint_united/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Training",
-        "item": "https://juliandunsbergen.github.io/Sprint_united/training"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Info",
-        "item": "https://juliandunsbergen.github.io/Sprint_united/info"
-      }
-    ]
-  }
-  </script>
-  <script type="module" crossorigin src="/Sprint_united/assets/index-DAOnJfmK.js"></script>
+  <script type="module" crossorigin src="/Sprint_united/assets/index-CYkNPVyi.js"></script>
   <link rel="stylesheet" crossorigin href="/Sprint_united/assets/index-CwNOcjkR.css">
 </head>
 
 <body>
-  <!-- Noscript / crawler fallback: sociale scrapers en bots die geen JS renderen zien dit. -->
-  <noscript>
-    <div style="padding: 2rem; font-family: system-ui, sans-serif; color: #fff; background: #050510;">
-      <h1>Sprint United — Hardloopclub voor kinderen (6-12 jaar) in Putten</h1>
-      <p>
-        Sprint United is een hardloopclub voor kinderen van 6 tot 12 jaar in Putten.
-        De club is opgericht door Huib Jansen in augustus 2025 en is inmiddels uitgegroeid tot een
-        enthousiaste groep van 12 jonge atleten. Onze trainer is Herbert Jansen.
-      </p>
-      <h2>Wanneer &amp; Waar</h2>
-      <p>
-        Training: elke vrijdag van 17:30 tot 18:30.<br />
-        Winterlocatie: parkeerplaats van SDC Putten.<br />
-        Vanaf maart 2026: grasveld aan de Driestweg in Krachtighuizen.
-      </p>
-      <h2>Proeftraining aanvragen</h2>
-      <p>
-        Interesse? Stuur een e-mail naar <a href="mailto:huibjansen@gmail.com">huibjansen@gmail.com</a>
-        of bekijk de volledige website (JavaScript vereist) om het aanmeldformulier te gebruiken.
-      </p>
-      <p>
-        <strong>Deze website vereist JavaScript voor de volledige ervaring.</strong>
-      </p>
-    </div>
-  </noscript>
+  <!--
+    Prerendered static content voor crawlers en eerste pageload (FOUC-preventie).
+    React's createRoot() wipet deze inhoud bij mount en vervangt hem door de live app.
+    Crawlers (Googlebot, Bingbot, sociale scrapers) zien dit direct — H1, beschrijvende tekst
+    en locatie-info — zonder op JS-rendering te hoeven wachten.
+  -->
+  <div id="root">
+    <div style="padding: 2rem; max-width: 900px; margin: 0 auto; font-family: system-ui, -apple-system, sans-serif; color: #fff; background: #050510; min-height: 100vh;">
+      <header>
+        <h1 style="font-size: 2.5rem; margin: 0 0 1rem 0;">Sprint United — Hardloopclub voor kinderen (6-12 jaar) in Putten</h1>
+        <p style="font-size: 1.2rem; color: #ccc; margin: 0 0 2rem 0;">
+          Dé hardloopclub voor kinderen van 6 tot 12 jaar in Putten. Plezier, beweging en vriendschap.
+        </p>
+      </header>
 
-  <div id="root"></div>
+      <section>
+        <h2 style="font-size: 1.8rem; margin-top: 2rem;">Over Sprint United</h2>
+        <p>
+          Sprint United is een hardloopclub voor kinderen van 6 tot 12 jaar.
+          De club is opgericht door Huib Jansen in augustus 2025 en is inmiddels
+          uitgegroeid tot een enthousiaste groep van 12 jonge atleten. Onze trainer is
+          Herbert Jansen. Samen zorgen we voor trainingen waarin techniek, conditie en
+          vooral plezier in het hardlopen centraal staan.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.8rem; margin-top: 2rem;">Wanneer &amp; Waar</h2>
+        <p><strong>Vrijdag 17:30 - 18:30.</strong> Elke week trainen we samen aan onze conditie en techniek.</p>
+        <ul>
+          <li><strong>Winterlocatie:</strong> parkeerplaats van SDC Putten.</li>
+          <li><strong>Vanaf maart 2026:</strong> grasveld aan de Driestweg in Krachtighuizen.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.8rem; margin-top: 2rem;">Aanmelden proeftraining</h2>
+        <p>
+          Interesse? Meld je aan voor een gratis proeftraining. Vul het formulier in of stuur een e-mail naar
+          <a href="mailto:huibjansen@gmail.com" style="color: #ffd700;">huibjansen@gmail.com</a>.
+        </p>
+      </section>
+
+      <noscript>
+        <p style="margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px;">
+          <strong>Deze website vereist JavaScript voor de volledige ervaring.</strong>
+          Stuur voor nu een e-mail naar <a href="mailto:huibjansen@gmail.com" style="color: #ffd700;">huibjansen@gmail.com</a>.
+        </p>
+      </noscript>
+    </div>
+  </div>
 </body>
 
 </html>
