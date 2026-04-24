@@ -1,0 +1,32 @@
+{
+  "name": "Sprint United — Hardloopclub voor kinderen in Putten",
+  "short_name": "Sprint United",
+  "description": "Hardloopclub voor kinderen van 6 tot 12 jaar in Putten. Elke vrijdag training waarin techniek, conditie en plezier centraal staan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050510",
+  "theme_color": "#050510",
+  "lang": "nl-NL",
+  "categories": ["sports", "kids", "lifestyle"],
+  "icons": [
+    {
+      "src": "./logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "./logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "./favicon.jpg",
+      "sizes": "64x64",
+      "type": "image/jpeg"
+    }
+  ]
+}

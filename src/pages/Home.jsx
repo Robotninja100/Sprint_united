@@ -4,8 +4,15 @@ import Hero from '../components/Hero';
 import SignupForm from '../components/SignupForm';
 import Gallery from '../components/Gallery';
 import groupImg from '../assets/sprint_united_group.jpg';
+import useSEO from '../hooks/useSEO';
 
 const Home = () => {
+    useSEO({
+        title: 'Sprint United | Hardloopclub voor kinderen (6-12 jaar) in Putten',
+        description: 'Sprint United is dé hardloopclub voor kinderen van 6 tot 12 jaar in Putten. Elke vrijdag 17:30 training waarin techniek, conditie en plezier centraal staan. Meld je aan voor een gratis proeftraining!',
+        path: '/',
+    });
+
     return (
         <>
             <Hero />
@@ -34,7 +41,7 @@ const Home = () => {
                             boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
                             border: '1px solid rgba(255,215,0,0.2)'
                         }}>
-                            <img src={groupImg} alt="Sprint United Groep" style={{ width: '100%', display: 'block' }} />
+                            <img src={groupImg} alt="Groepsfoto Sprint United — hardloopclub voor kinderen van 6 tot 12 jaar in Putten" loading="lazy" style={{ width: '100%', display: 'block' }} />
                         </div>
                         <div style={{
                             position: 'absolute',

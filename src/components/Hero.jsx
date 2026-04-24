@@ -3,7 +3,10 @@ import huibRunning from '../assets/sprint_united_huib.jpg';
 
 const Hero = () => {
   return (
-    <section className="hero" style={{
+    <section
+      className="hero"
+      aria-label="Sprint United — Hardloopclub voor kinderen in Putten"
+      style={{
       position: 'relative',
       height: '100vh',
       minHeight: '500px',
@@ -12,7 +15,11 @@ const Hero = () => {
       justifyContent: 'center',
       overflow: 'hidden'
     }}>
-      <div className="hero-bg" style={{
+      <div
+        className="hero-bg"
+        role="img"
+        aria-label="Huib Jansen — oprichter van hardloopclub Sprint United — tijdens een sprint"
+        style={{
         position: 'absolute',
         top: 0,
         left: 0,

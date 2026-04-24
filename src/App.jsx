@@ -1,16 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
-import TrainingPage from './pages/TrainingPage';
-import InfoPage from './pages/InfoPage';
 import SuccessPage from './pages/SuccessPage';
 import logo from './assets/logo.jpg';
 
 function App() {
   return (
-    // 👇 HIER ZAT HET PROBLEEM! Ik heb de basename toegevoegd.
-    // Let op: Dit moet PRECIES matchen met je repository naam.
-    <Router basename="/Sprint_united/">
+    <Router basename="/">
       <div className="app">
         <nav style={{
           position: 'fixed',
@@ -48,8 +44,6 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/training" element={<TrainingPage />} />
-          <Route path="/info" element={<InfoPage />} />
           <Route path="/success" element={<SuccessPage />} />
         </Routes>
 

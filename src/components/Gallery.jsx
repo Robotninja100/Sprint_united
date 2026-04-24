@@ -118,7 +118,7 @@ const Gallery = () => {
                 <div style={{ marginBottom: '1.5rem' }}>
                     <GalleryImage
                         src={trainingAction}
-                        alt="Sprint United training met pionnen"
+                        alt="Kinderen van hardloopclub Sprint United trainen met pionnen in Putten"
                         height="clamp(280px, 45vw, 520px)"
                         caption="Training in actie"
                     />
@@ -133,15 +133,15 @@ const Gallery = () => {
                         marginBottom: '1.5rem'
                     }}
                 >
-                    <GalleryImage src={team1} alt="Sprint United team — groepsfoto 1" height="clamp(220px, 32vw, 360px)" />
-                    <GalleryImage src={team2} alt="Sprint United team — groepsfoto 2" height="clamp(220px, 32vw, 360px)" />
-                    <GalleryImage src={team3} alt="Sprint United team — groepsfoto 3" height="clamp(220px, 32vw, 360px)" />
-                    <GalleryImage src={team4} alt="Sprint United team — groepsfoto 4" height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team1} alt="Groepsfoto jeugdhardloopclub Sprint United Putten tijdens training" height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team2} alt="Kinderen van Sprint United poseren samen na de hardlooptraining" height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team3} alt="Jonge atleten van hardloopclub Sprint United in Putten" height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team4} alt="Teamfoto Sprint United — hardloopclub voor kinderen 6 tot 12 jaar" height="clamp(220px, 32vw, 360px)" />
                 </div>
 
                 <GalleryImage
                     src={threeKids}
-                    alt="Kinderen lopen bij het water"
+                    alt="Drie kinderen van Sprint United hardlopen samen langs het water in Krachtighuizen"
                     height="clamp(240px, 38vw, 440px)"
                     caption="Samen onderweg"
                 />

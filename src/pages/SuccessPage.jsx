@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useSEO from '../hooks/useSEO';
 
 const SuccessPage = () => {
+    useSEO({
+        title: 'Aanmelding ontvangen | Sprint United',
+        description: 'Bedankt voor je aanmelding bij Sprint United. We nemen zo snel mogelijk contact met je op.',
+        path: '/success',
+        noindex: true,
+    });
+
     return (
         <div style={{
             height: '100vh',
