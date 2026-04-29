@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Mail, User, MessageSquare, Send } from 'lucide-react';
+import site from '../content/site.json';
 
 
 const SignupForm = () => {
     const navigate = useNavigate();
+    const { signup } = site;
 
     const [formData, setFormData] = useState({
         name: '',
@@ -12,14 +14,11 @@ const SignupForm = () => {
         comments: ''
     });
 
-    // VERVANG DIT DOOR HET EMAILADRES WAAR DE BERICHTEN HEEN MOETEN:
-    const TARGET_EMAIL = "huibjansen@gmail.com"; // Bijv. info@sprintunited.nl
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
+            const response = await fetch(`https://formsubmit.co/ajax/${signup.targetEmail}`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,7 +39,7 @@ const SignupForm = () => {
                 throw new Error('FormSubmit error');
             }
         } catch (error) {
-            alert('Er ging iets mis bij het versturen. Controleer het emailadres of probeer het later nog eens.');
+            alert(signup.errorMessage);
         }
     };
 
@@ -73,13 +72,13 @@ const SignupForm = () => {
                 }}>
                     <h2 className="section-title" style={{ marginBottom: '2rem', display: 'inline-flex', alignItems: 'center', gap: '1rem', justifyContent: 'center', width: '100%' }}>
                         <Send size={36} strokeWidth={2} style={{ color: 'var(--color-primary-orange)', flexShrink: 0 }} />
-                        Aanmelden Proeftraining
+                        {signup.title}
                     </h2>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                                 <User size={18} style={{ color: 'var(--color-primary-gold)' }} />
-                                Naam
+                                {signup.nameLabel}
                             </label>
                             <input
                                 type="text"
@@ -88,13 +87,13 @@ const SignupForm = () => {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder="Jouw naam"
+                                placeholder={signup.namePlaceholder}
                             />
                         </div>
                         <div>
                             <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                                 <Mail size={18} style={{ color: 'var(--color-primary-gold)' }} />
-                                Emailadres
+                                {signup.emailLabel}
                             </label>
                             <input
                                 type="email"
@@ -103,25 +102,25 @@ const SignupForm = () => {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="je@email.com"
+                                placeholder={signup.emailPlaceholder}
                             />
                         </div>
                         <div>
                             <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                                 <MessageSquare size={18} style={{ color: 'var(--color-primary-gold)' }} />
-                                Eventuele opmerkingen
+                                {signup.commentsLabel}
                             </label>
                             <textarea
                                 name="comments"
                                 style={{ ...inputStyle, height: '120px', resize: 'vertical' }}
                                 value={formData.comments}
                                 onChange={handleChange}
-                                placeholder="Heb je vragen of opmerkingen?"
+                                placeholder={signup.commentsPlaceholder}
                             />
                         </div>
                         <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
                             <Send size={18} />
-                            Verstuur Aanvraag
+                            {signup.submitLabel}
                         </button>
                     </form>
                 </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import huibRunning from '../assets/sprint_united_huib.jpg';
+import site from '../content/site.json';
 
 const Hero = () => {
+  const { hero } = site;
   return (
     <section
       className="hero"
@@ -18,7 +20,7 @@ const Hero = () => {
       <div
         className="hero-bg"
         role="img"
-        aria-label="Huib Jansen — oprichter van hardloopclub Sprint United — tijdens een sprint"
+        aria-label={hero.imageAlt}
         style={{
         position: 'absolute',
         top: 0,
@@ -41,17 +43,16 @@ const Hero = () => {
           letterSpacing: '5px',
           filter: 'drop-shadow(0 0 10px rgba(255,69,0,0.5))'
         }}>
-          Sprint United
+          {hero.title}
         </h1>
         <p className="hero-subtitle" style={{
           margin: '0 auto 2rem',
           color: 'var(--color-text-light)'
         }}>
-          Dé hardloopclub voor kinderen van 6 - 12 jaar in Putten.
-          Plezier, beweging en vriendschap.
+          {hero.subtitle}
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          <a href="#signup" className="btn btn-primary animate-float">Proeftraining aanvragen</a>
+          <a href="#signup" className="btn btn-primary animate-float">{hero.ctaLabel}</a>
         </div>
       </div>
     </section>

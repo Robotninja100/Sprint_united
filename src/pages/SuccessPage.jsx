@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useSEO from '../hooks/useSEO';
+import site from '../content/site.json';
 
 const SuccessPage = () => {
+    const { successPage } = site;
+
     useSEO({
         title: 'Aanmelding ontvangen | Sprint United',
         description: 'Bedankt voor je aanmelding bij Sprint United. We nemen zo snel mogelijk contact met je op.',
@@ -40,17 +43,16 @@ const SuccessPage = () => {
                     WebkitTextFillColor: 'transparent',
                     marginBottom: '1rem'
                 }}>
-                    Aanvraag Verzonden!
+                    {successPage.title}
                 </h1>
                 <p className="success-text" style={{
                     color: 'var(--color-text-muted)',
                     marginBottom: '2.5rem'
                 }}>
-                    Bedankt voor je aanmelding voor een proeftraining bij Sprint United.
-                    We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.
+                    {successPage.message}
                 </p>
                 <Link to="/" className="btn btn-primary">
-                    Terug naar Home
+                    {successPage.backLabel}
                 </Link>
             </div>
         </div>

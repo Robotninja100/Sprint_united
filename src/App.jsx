@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import SuccessPage from './pages/SuccessPage';
 import logo from './assets/logo.jpg';
+import site from './content/site.json';
 
 function App() {
   return (
@@ -31,14 +32,14 @@ function App() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-              SPRINT UNITED
+              {site.nav.logoText}
             </span>
           </Link>
           <div className="nav-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <a href="#over-ons" className="nav-link">Over Ons</a>
-            <a href="#training-info" className="nav-link">Training</a>
-            <a href="#galerij" className="nav-link">Galerij</a>
-            <Link to="/#signup" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>Proeftraining</Link>
+            {site.nav.links.map((l) => (
+              <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
+            ))}
+            <Link to="/#signup" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>{site.nav.ctaLabel}</Link>
           </div>
         </nav>
 
@@ -54,7 +55,7 @@ function App() {
           color: 'var(--color-text-muted)',
           marginTop: 'auto'
         }}>
-          <p>&copy; 2026 Sprint United. Alle rechten voorbehouden.</p>
+          <p>{site.footer.copyright}</p>
         </footer>
       </div>
     </Router>

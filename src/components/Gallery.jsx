@@ -6,6 +6,7 @@ import team2 from '../assets/gallery/team_2.jpg';
 import team3 from '../assets/gallery/team_3.jpg';
 import team4 from '../assets/gallery/team_4.jpg';
 import threeKids from '../assets/gallery/three_kids.jpg';
+import site from '../content/site.json';
 
 const GalleryImage = ({ src, alt, height, caption }) => (
     <div
@@ -62,6 +63,7 @@ const GalleryImage = ({ src, alt, height, caption }) => (
 );
 
 const Gallery = () => {
+    const { gallery } = site;
     return (
         <section
             id="galerij"
@@ -101,7 +103,7 @@ const Gallery = () => {
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <h2 className="section-title" style={{ display: 'inline-flex', alignItems: 'center', gap: '1rem', justifyContent: 'center', width: '100%' }}>
                     <Camera size={36} strokeWidth={2} style={{ color: 'var(--color-accent-cyan)', flexShrink: 0 }} />
-                    Onze Club in Actie
+                    {gallery.title}
                 </h2>
                 <p style={{
                     textAlign: 'center',
@@ -111,16 +113,15 @@ const Gallery = () => {
                     margin: '0 auto var(--spacing-lg)',
                     lineHeight: 1.7
                 }}>
-                    Van training met pionnen tot het hele team bij elkaar —
-                    zo ziet een middag bij Sprint United eruit.
+                    {gallery.intro}
                 </p>
 
                 <div style={{ marginBottom: '1.5rem' }}>
                     <GalleryImage
                         src={trainingAction}
-                        alt="Kinderen van hardloopclub Sprint United trainen met pionnen in Putten"
+                        alt={gallery.trainingAction.alt}
                         height="clamp(280px, 45vw, 520px)"
-                        caption="Training in actie"
+                        caption={gallery.trainingAction.caption}
                     />
                 </div>
 
@@ -133,17 +134,17 @@ const Gallery = () => {
                         marginBottom: '1.5rem'
                     }}
                 >
-                    <GalleryImage src={team1} alt="Groepsfoto jeugdhardloopclub Sprint United Putten tijdens training" height="clamp(220px, 32vw, 360px)" />
-                    <GalleryImage src={team2} alt="Kinderen van Sprint United poseren samen na de hardlooptraining" height="clamp(220px, 32vw, 360px)" />
-                    <GalleryImage src={team3} alt="Jonge atleten van hardloopclub Sprint United in Putten" height="clamp(220px, 32vw, 360px)" />
-                    <GalleryImage src={team4} alt="Teamfoto Sprint United — hardloopclub voor kinderen 6 tot 12 jaar" height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team1} alt={gallery.team1Alt} height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team2} alt={gallery.team2Alt} height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team3} alt={gallery.team3Alt} height="clamp(220px, 32vw, 360px)" />
+                    <GalleryImage src={team4} alt={gallery.team4Alt} height="clamp(220px, 32vw, 360px)" />
                 </div>
 
                 <GalleryImage
                     src={threeKids}
-                    alt="Drie kinderen van Sprint United hardlopen samen langs het water in Krachtighuizen"
+                    alt={gallery.threeKids.alt}
                     height="clamp(240px, 38vw, 440px)"
-                    caption="Samen onderweg"
+                    caption={gallery.threeKids.caption}
                 />
             </div>
         </section>

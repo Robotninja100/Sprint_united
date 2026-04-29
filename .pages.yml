@@ -1,0 +1,210 @@
+media:
+  - name: gallery
+    label: Galerij foto's
+    input: src/assets/gallery
+    output: /src/assets/gallery
+    extensions: [jpg, jpeg, png, webp]
+  - name: hoofdfotos
+    label: Hoofdfoto's
+    input: src/assets
+    output: /src/assets
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: site
+    label: Website tekst
+    path: src/content/site.json
+    type: file
+    format: json
+    fields:
+      - name: nav
+        label: Menu (bovenaan)
+        type: object
+        fields:
+          - name: logoText
+            label: Logo tekst
+            type: string
+          - name: links
+            label: Menu items
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+              - name: href
+                label: Link (bv. #over-ons)
+                type: string
+          - name: ctaLabel
+            label: Knop tekst (Proeftraining)
+            type: string
+
+      - name: hero
+        label: Hero (bovenkant pagina)
+        type: object
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: subtitle
+            label: Ondertitel
+            type: text
+          - name: ctaLabel
+            label: Knop tekst
+            type: string
+          - name: imageAlt
+            label: Beschrijving achtergrondfoto (voor SEO/voorlezers)
+            type: string
+
+      - name: about
+        label: Over Ons sectie
+        type: object
+        fields:
+          - name: title
+            label: Sectie titel
+            type: string
+          - name: paragraphs
+            label: Alinea's (gebruik **tekst** voor vetgedrukt)
+            type: text
+            list: true
+          - name: athletesBadge
+            label: Badge tekst (bv. 12 Atleten)
+            type: string
+          - name: groupImageAlt
+            label: Beschrijving groepsfoto (voor SEO)
+            type: string
+
+      - name: training
+        label: Wanneer & Waar sectie
+        type: object
+        fields:
+          - name: title
+            label: Sectie titel
+            type: string
+          - name: schedule
+            label: Tijd (bv. Vrijdag 17:30 - 18:30)
+            type: string
+          - name: scheduleDesc
+            label: Toelichting onder de tijd
+            type: text
+          - name: currentLocation
+            label: Huidige locatie
+            type: object
+            fields:
+              - name: label
+                label: Label (bv. Nu (Winterlocatie))
+                type: string
+              - name: value
+                label: Adres / locatie
+                type: string
+          - name: futureLocation
+            label: Toekomstige locatie
+            type: object
+            fields:
+              - name: label
+                label: Label (bv. Vanaf Maart 2026)
+                type: string
+              - name: value
+                label: Adres / locatie
+                type: string
+
+      - name: gallery
+        label: Galerij sectie
+        type: object
+        fields:
+          - name: title
+            label: Sectie titel
+            type: string
+          - name: intro
+            label: Inleidende tekst
+            type: text
+          - name: trainingAction
+            label: Grote foto bovenaan (training_action.jpg)
+            type: object
+            fields:
+              - name: caption
+                label: Bijschrift
+                type: string
+              - name: alt
+                label: Beschrijving (voor SEO)
+                type: string
+          - name: team1Alt
+            label: Beschrijving team_1.jpg
+            type: string
+          - name: team2Alt
+            label: Beschrijving team_2.jpg
+            type: string
+          - name: team3Alt
+            label: Beschrijving team_3.jpg
+            type: string
+          - name: team4Alt
+            label: Beschrijving team_4.jpg
+            type: string
+          - name: threeKids
+            label: Onderste foto (three_kids.jpg)
+            type: object
+            fields:
+              - name: caption
+                label: Bijschrift
+                type: string
+              - name: alt
+                label: Beschrijving (voor SEO)
+                type: string
+
+      - name: signup
+        label: Aanmeldformulier
+        type: object
+        fields:
+          - name: title
+            label: Sectie titel
+            type: string
+          - name: targetEmail
+            label: E-mailadres waar aanmeldingen heen gaan
+            type: string
+            pattern: '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+          - name: nameLabel
+            label: Label naamveld
+            type: string
+          - name: namePlaceholder
+            label: Placeholder naamveld
+            type: string
+          - name: emailLabel
+            label: Label e-mailveld
+            type: string
+          - name: emailPlaceholder
+            label: Placeholder e-mailveld
+            type: string
+          - name: commentsLabel
+            label: Label opmerkingenveld
+            type: string
+          - name: commentsPlaceholder
+            label: Placeholder opmerkingenveld
+            type: string
+          - name: submitLabel
+            label: Verzendknop tekst
+            type: string
+          - name: errorMessage
+            label: Foutmelding bij verzendprobleem
+            type: text
+
+      - name: successPage
+        label: Bedankt-pagina (na aanmelding)
+        type: object
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: message
+            label: Bericht
+            type: text
+          - name: backLabel
+            label: Knop tekst (terug naar home)
+            type: string
+
+      - name: footer
+        label: Voettekst
+        type: object
+        fields:
+          - name: copyright
+            label: Copyright tekst
+            type: string
