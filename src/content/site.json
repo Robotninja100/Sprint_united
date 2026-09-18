@@ -2,9 +2,18 @@
   "nav": {
     "logoText": "SPRINT UNITED",
     "links": [
-      { "label": "Over Ons", "href": "#over-ons" },
-      { "label": "Training", "href": "#training-info" },
-      { "label": "Galerij", "href": "#galerij" }
+      {
+        "label": "Over Ons",
+        "href": "#over-ons"
+      },
+      {
+        "label": "Training ",
+        "href": "#training-info"
+      },
+      {
+        "label": "Galerij",
+        "href": "#galerij"
+      }
     ],
     "ctaLabel": "Proeftraining"
   },
