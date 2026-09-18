@@ -15,21 +15,20 @@
         "href": "#galerij"
       }
     ],
-    "ctaLabel": "Proeftraining"
+    "ctaLabel": "Aanmelden voor wachtlijst"
   },
   "hero": {
     "title": "Sprint United",
-    "subtitle": "Dé hardloopclub voor kinderen van 6 - 12 jaar in Putten. Plezier, beweging en vriendschap.",
-    "ctaLabel": "Proeftraining aanvragen",
+    "subtitle": "Dé hardloopclub voor kinderen van 6 - 12 jaar in Putten. Helaas kunnen wij momenteel geen nieuwe leden aannemen, vanwege overweldigende belangstelling. Wel is het mogelijk om je op de wachtlijst te plaatsen.",
+    "ctaLabel": "Aanmelden voor wachtlijst",
     "imageAlt": "Huib Jansen — oprichter van hardloopclub Sprint United — tijdens een sprint"
   },
   "about": {
     "title": "Over Sprint United",
     "paragraphs": [
-      "Sprint United is een hardloopclub voor kinderen van 6 - 12 jaar. De club is opgericht door **Huib Jansen** in augustus 2025 en is inmiddels uitgegroeid tot een enthousiaste groep van 12 jonge atleten.",
+      "Sprint United is een hardloopclub voor kinderen van 6 - 12 jaar. De club is opgericht door **Huib Jansen** in augustus 2025 en is inmiddels uitgegroeid tot een enthousiaste groep van 25 jonge atleten.",
       "Onze trainer is **Herbert Jansen**. Samen zorgen we voor trainingen waarin techniek, conditie en vooral plezier in het hardlopen centraal staan."
     ],
-    "athletesBadge": "12 Atleten",
     "groupImageAlt": "Groepsfoto Sprint United — hardloopclub voor kinderen van 6 tot 12 jaar in Putten"
   },
   "training": {
@@ -37,19 +36,17 @@
     "schedule": "Vrijdag 17:30 - 18:30",
     "scheduleDesc": "Elke week trainen we samen aan onze conditie en techniek.",
     "currentLocation": {
-      "label": "Nu (Winterlocatie)",
-      "value": "Parkeerplaats van SDC Putten"
+      "label": "Nu",
+      "value": "Grasveld aan de Driestweg in Krachtighuizen"
     },
     "futureLocation": {
-      "label": "Vanaf Maart 2026",
-      "value": "Grasveld aan de Driestweg in Krachtighuizen"
+      "label": "Vanaf November 2026",
+      "value": "???"
     }
   },
   "gallery": {
     "title": "Onze Club in Actie",
-    "intro": "Van training met pionnen tot het hele team bij elkaar — zo ziet een middag bij Sprint United eruit.",
     "trainingAction": {
-      "caption": "Training in actie",
       "alt": "Kinderen van hardloopclub Sprint United trainen met pionnen in Putten"
     },
     "team1Alt": "Groepsfoto jeugdhardloopclub Sprint United Putten tijdens training",
@@ -57,12 +54,11 @@
     "team3Alt": "Jonge atleten van hardloopclub Sprint United in Putten",
     "team4Alt": "Teamfoto Sprint United — hardloopclub voor kinderen 6 tot 12 jaar",
     "threeKids": {
-      "caption": "Samen onderweg",
       "alt": "Drie kinderen van Sprint United hardlopen samen langs het water in Krachtighuizen"
     }
   },
   "signup": {
-    "title": "Aanmelden Proeftraining",
+    "title": "Aanmelden voor wachtlijst",
     "targetEmail": "sprintunitedputten@gmail.com",
     "nameLabel": "Naam",
     "namePlaceholder": "Jouw naam",
@@ -75,7 +71,7 @@
   },
   "successPage": {
     "title": "Aanvraag Verzonden!",
-    "message": "Bedankt voor je aanmelding voor een proeftraining bij Sprint United. We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
+    "message": "Bedankt voor je aanmelding voor de wachtlijst van Sprint United. We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
     "backLabel": "Terug naar Home"
   },
   "footer": {
