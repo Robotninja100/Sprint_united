@@ -1,6 +1,6 @@
 {
   "nav": {
-    "logoText": "SPRINT UNITED ",
+    "logoText": "SPRINT UNITED",
     "links": [
       {
         "label": "Over Ons",
@@ -15,32 +15,31 @@
         "href": "#galerij"
       }
     ],
-    "ctaLabel": "Aanmelden voor wachtlijst"
+    "ctaLabel": "Aanmelden voor proeftraining"
   },
   "hero": {
     "title": "Sprint United",
-    "subtitle": "Dé hardloopclub voor kinderen van 6 - 12 jaar in Putten. Helaas kunnen wij momenteel geen nieuwe leden aannemen, vanwege overweldigende belangstelling. Wel is het mogelijk om je op de wachtlijst te plaatsen.",
-    "ctaLabel": "Aanmelden voor wachtlijst",
+    "subtitle": "Dé hardloopclub voor kinderen van 6 - 12 jaar in Putten.",
+    "ctaLabel": "Aanmelden voor proeftraining",
     "imageAlt": "Huib Jansen — oprichter van hardloopclub Sprint United — tijdens een sprint"
   },
   "about": {
     "title": "Over Sprint United",
     "paragraphs": [
       "Sprint United is een hardloopclub voor kinderen van 6 - 12 jaar. De club is opgericht door **Huib Jansen** in augustus 2025 en is inmiddels uitgegroeid tot een enthousiaste groep van 25 jonge atleten.",
-      "Onze trainer is **Herbert Jansen**. Samen zorgen we voor trainingen waarin techniek, conditie en vooral plezier in het hardlopen centraal staan."
+      "Onze trainer is **Herbert Jansen**. Samen met hulptrainers/ouders zorgen we voor trainingen waarin techniek, conditie en vooral plezier in het hardlopen centraal staan. Hierbij komen verschillende atletiekonderdelen aan bod, zoals vortex werpen, hordelopen, verspringen en natuurlijk hardlopen."
     ],
     "groupImageAlt": "Groepsfoto Sprint United — hardloopclub voor kinderen van 6 tot 12 jaar in Putten"
   },
   "training": {
     "title": "Wanneer & Waar",
     "schedule": "Vrijdag 17:30 - 18:30",
-    "scheduleDesc": "Elke week trainen we samen aan onze conditie en techniek.",
     "currentLocation": {
       "label": "Nu",
-      "value": "Grasveld aan de Driestweg in Krachtighuizen"
+      "value": "Korfbalveld van De Meeuwen"
     },
     "futureLocation": {
-      "label": "Vanaf November 2026",
+      "label": "Vanaf maart 2027",
       "value": "???"
     }
   },
@@ -58,7 +57,7 @@
     }
   },
   "signup": {
-    "title": "Aanmelden voor wachtlijst",
+    "title": "Aanmelden voor proeftraining",
     "targetEmail": "sprintunitedputten@gmail.com",
     "nameLabel": "Naam",
     "namePlaceholder": "Jouw naam",
@@ -71,7 +70,7 @@
   },
   "successPage": {
     "title": "Aanvraag Verzonden!",
-    "message": "Bedankt voor je aanmelding voor de wachtlijst van Sprint United. We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
+    "message": "Bedankt voor je aanmelding voor een proeftraining van Sprint United. We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.",
     "backLabel": "Terug naar Home"
   },
   "footer": {
